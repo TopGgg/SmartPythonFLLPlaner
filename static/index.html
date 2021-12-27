@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <!--script src="index.js"></script-->
+        <title>FLL Smart Strategy Planer</title>
+        <link rel="stylesheet" href="./static/style.css">
+        <!--link rel="stylesheet" href="style.css"-->
+        <!--link href="libs/prism.css" rel="stylesheet" /--> 
+        <link href="./static/libs/prism.css" rel="stylesheet" /> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body onload="init()">
+        <div class="card">
+            <div class="container">
+                <header>
+                    <input type="number" class="diameter" placeholder="Wheel Diameter" id="diameter" value="80"/>
+                    <input type="number" class="track" placeholder="Axle Track" id="track" value="121"/>
+                    <a href="#" onclick="generatePython()" class="pythonBtn">Generate Python Code</a>
+                </header>
+                <div class="paint">
+                    <canvas id="can" width="1600" height="750" style="position:absolute;top:10%;left:3%;border:2px solid;background: url('./static/bg.jpg');  background-repeat: no-repeat;
+                    background-size: 1600px 750px;"></canvas>
+                    <div style="position:absolute;top:12%;left:90%;">Choose Color</div>
+                    <div style="position:absolute;top:15%;left:90%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+                    <div style="position:absolute;top:15%;left:91%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+                    <div style="position:absolute;top:15%;left:92%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+                    <div style="position:absolute;top:17%;left:91%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+                    <div style="position:absolute;top:17%;left:92%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+                    <div style="position:absolute;top:17%;left:90%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+                    <div style="position:absolute;top:20%;left:90%;">Eraser</div>
+                    <div style="position:absolute;top:22%;left:90%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+                    <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:90%;">
+                </div>
+                <div class="python">
+                    <pre><code class="language-python" id="pythonCode"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!--script src="libs/prism.js"></script--> 
+        
+        <script src="./static/libs/prism.js"></script> 
+        <script src="./static/utils.js"></script> 
+        <script src="./static/index.js"></script>
+        <script src="./static/properties.js"></script>
+    </body>
+    </html>
